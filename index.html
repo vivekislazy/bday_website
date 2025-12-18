@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday ❤️</title>  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      max-width: 700px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 14px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      background: white;
+      color: #ff4f7a;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* HERO */
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    /* LETTER */
+    .letter-box {
+      background: rgba(255,255,255,0.15);
+      padding: 30px;
+      border-radius: 20px;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    /* SURPRISE */
+    #surpriseText {
+      display: none;
+      margin-top: 20px;
+      font-size: 22px;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 20px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style></head>
+<body>  <!-- HERO -->  <section class="hero">
+    <h1>🎂 Happy Birthday My Special One 🎂</h1>
+    <p>Today the universe celebrates the day you were born 💖</p>
+    <button class="btn" onclick="scrollToSection('letter')">Start the Surprise 🎁</button>
+  </section>  <!-- LETTER -->  <section id="letter">
+    <h2>💌 A Letter For You</h2>
+    <div class="letter-box">
+      <p>
+        On this beautiful day, I just want you to know how incredibly special you are to me.
+        Your smile, your kindness, and your presence make my world brighter.
+        I’m grateful for every moment, every laugh, and every memory with you.
+        May this birthday be the beginning of your most amazing year yet ❤️
+      </p>
+    </div>
+    <button class="btn" onclick="scrollToSection('gallery')">Next Surprise ✨</button>
+  </section>  <!-- GALLERY -->  <section id="gallery">
+    <h2>📸 Our Beautiful Moments</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/400x300" />
+      <img src="https://via.placeholder.com/400x300" />
+      <img src="https://via.placeholder.com/400x300" />
+      <img src="https://via.placeholder.com/400x300" />
+    </div>
+    <button class="btn" onclick="scrollToSection('surprise')">One Last Thing 💖</button>
+  </section>  <!-- SURPRISE -->  <section id="surprise">
+    <h2>🎉 Final Surprise</h2>
+    <p>Click the button below 👇</p>
+    <button class="btn" onclick="showLove()">Click Me ❤️</button>
+    <p id="surpriseText">I love you endlessly. Today, tomorrow, always. 💞</p>
+  </section>  <footer>
+    Made with ❤️ just for you
+  </footer>  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function showLove() {
+      document.getElementById('surpriseText').style.display = 'block';
+    }
+  </script></body>
+</html>
